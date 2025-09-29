@@ -29,8 +29,10 @@ class _SplashViewState extends State<SplashView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logo.png'),
-              SizedBox(height: 20.h),
+              Image.asset('assets/logo.png',
+              width: 200.w,
+              height: 200.h,
+              ),
               AnimatedGradientText(
                 text: 'FitRounds',
                 style: AppTypography.title),
