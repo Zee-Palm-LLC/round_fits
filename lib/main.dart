@@ -28,9 +28,16 @@ class MyApp extends StatelessWidget {
     final locale = saved != null
         ? _parseLocale(saved)
         : Get.deviceLocale;
-    return ScreenUtilInit(
-      designSize: const Size(390, 844),
-      minTextAdapt: true,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final bool isTablet = constraints.maxWidth >= 650 && constraints.maxWidth < 1100;
+        final Size designSize = isTablet
+            ? Size(constraints.maxWidth, constraints.maxHeight)
+            : const Size(390, 844);
+
+        return ScreenUtilInit(
+          designSize: designSize,
+          minTextAdapt: true,
       builder: (context, child) {
         return GetBuilder<ThemeController>(
           builder: (c) {
@@ -58,7 +65,7 @@ class MyApp extends StatelessWidget {
           },
         );
       },
-    );
+    );});}
   }
 }
 
