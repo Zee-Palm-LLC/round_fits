@@ -9,30 +9,13 @@ import 'package:workout_app/modules/settings/language_page.dart';
 import '../../controllers/theme_controller.dart';
 import '../../data/app_typography.dart';
 
-class SettingsPage extends StatefulWidget {
+class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
-  @override
-  State<SettingsPage> createState() => _SettingsPageState();
-}
-
-class _SettingsPageState extends State<SettingsPage> {
   static const String _privacyUrl =
       'https://www.zeepalm.com/app-privacy-policy';
   static const String _termsUrl =
       'https://www.zeepalm.com/app-terms-and-conditions';
-
-  late bool _isDark;
-  late FlexScheme _scheme;
-  late ThemeController _themeController;
-
-  @override
-  void initState() {
-    super.initState();
-    _themeController = Get.find<ThemeController>();
-    _isDark = _themeController.themeMode == ThemeMode.dark;
-    _scheme = _themeController.scheme;
-  }
 
   static Future<void> _openUrl(String url) async {
     final Uri uri = Uri.parse(_normalizeUrl(url));
@@ -49,12 +32,11 @@ class _SettingsPageState extends State<SettingsPage> {
     return 'https://$trimmed';
   }
 
-  void _toggleTheme(bool value) {
-    setState(() => _isDark = value);
-    _themeController.setThemeMode(value ? ThemeMode.dark : ThemeMode.light);
+  void _toggleTheme(bool value, ThemeController themeController) {
+    themeController.setThemeMode(value ? ThemeMode.dark : ThemeMode.light);
   }
 
-  void _pickScheme() async {
+  void _pickScheme(BuildContext context, ThemeController themeController) async {
     final schemes = FlexScheme.values;
     await showModalBottomSheet(
       context: context,
@@ -67,14 +49,13 @@ class _SettingsPageState extends State<SettingsPage> {
           itemBuilder: (_, i) {
             final s = schemes[i];
             final theme = FlexThemeData.light(scheme: s, useMaterial3: true);
-            final selected = _scheme == s;
+            final selected = themeController.scheme == s;
             return ListTile(
               leading: CircleAvatar(backgroundColor: theme.colorScheme.primary),
               title: Text(s.name),
               trailing: selected ? const Icon(Icons.check) : null,
               onTap: () {
-                setState(() => _scheme = s);
-                _themeController.setScheme(s);
+                themeController.setScheme(s);
                 Navigator.of(ctx).pop();
               },
             );
@@ -86,72 +67,84 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('settings'.tr, style: AppTypography.appBarTitle),
-        centerTitle: true,
-      ),
-      body: ListView(
-        padding: EdgeInsets.all(16.w),
-        children: [
-          _TileIn(
-            delayMs: 0,
-            child: ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Iconsax.moon),
-            title: Text('dark_mode'.tr),
-            trailing: Switch(value: _isDark, onChanged: _toggleTheme),
-            ),
+    return GetBuilder<ThemeController>(
+      builder: (themeController) {
+        final bool isSystemDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+        final bool isDarkEffective =
+            themeController.themeMode == ThemeMode.dark ||
+            (themeController.themeMode == ThemeMode.system && isSystemDark);
+        
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('settings'.tr, style: AppTypography.appBarTitle),
+            centerTitle: true,
           ),
-          const Divider(height: 1, thickness: 0.25),
-          _TileIn(
-            delayMs: 60,
-            child: ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Iconsax.brush_4),
-            title: Text('color_scheme'.tr),
-            subtitle: Text(_scheme.name),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: _pickScheme,
-            ),
+          body: ListView(
+            padding: EdgeInsets.all(16.w),
+            children: [
+              _TileIn(
+                delayMs: 0,
+                child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Iconsax.moon),
+                title: Text('dark_mode'.tr),
+                trailing: Switch(
+                  value: isDarkEffective, 
+                  onChanged: (value) => _toggleTheme(value, themeController)
+                ),
+                ),
+              ),
+              const Divider(height: 1, thickness: 0.25),
+              _TileIn(
+                delayMs: 60,
+                child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Iconsax.brush_4),
+                title: Text('color_scheme'.tr),
+                subtitle: Text(themeController.scheme.name),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _pickScheme(context, themeController),
+                ),
+              ),
+              const Divider(height: 1, thickness: 0.25),
+              _TileIn(
+                delayMs: 120,
+                child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Iconsax.language_square),
+                title: Text('language'.tr),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  Get.to(() => const LanguagePage());
+                },
+                ),
+              ),
+              const Divider(height: 1, thickness: 0.25),
+              _TileIn(
+                delayMs: 180,
+                child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Iconsax.shield_tick),
+                title: const Text('Privacy Policy'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _openUrl(_privacyUrl),
+                ),
+              ),
+              const Divider(height: 1, thickness: 0.25),
+              _TileIn(
+                delayMs: 240,
+                child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Iconsax.document_text),
+                title: const Text('Terms & Conditions'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _openUrl(_termsUrl),
+                ),
+              ),
+            ],
           ),
-          const Divider(height: 1, thickness: 0.25),
-          _TileIn(
-            delayMs: 120,
-            child: ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Iconsax.language_square),
-            title: Text('language'.tr),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Get.to(() => const LanguagePage());
-            },
-            ),
-          ),
-          const Divider(height: 1, thickness: 0.25),
-          _TileIn(
-            delayMs: 180,
-            child: ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Iconsax.shield_tick),
-            title: const Text('Privacy Policy'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => _openUrl(_privacyUrl),
-            ),
-          ),
-          const Divider(height: 1, thickness: 0.25),
-          _TileIn(
-            delayMs: 240,
-            child: ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Iconsax.document_text),
-            title: const Text('Terms & Conditions'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => _openUrl(_termsUrl),
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

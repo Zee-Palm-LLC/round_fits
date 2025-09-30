@@ -12,6 +12,7 @@ import 'package:workout_app/modules/timer/timer_page.dart';
 import '../../controllers/timer_controller.dart';
 import '../../data/app_typography.dart';
 import '../../services/storage_service.dart';
+import '../../utils/responsive.dart';
 import 'components/app_button.dart';
 import 'components/number_field.dart';
 
@@ -63,7 +64,8 @@ class _SetupPageState extends State<SetupPage> with SingleTickerProviderStateMix
       ),
       body: PrimaryBackground(
         child: SafeArea(
-          child: Padding(
+          child: ResponsiveContainer(
+            child: Padding(
               padding: EdgeInsets.all(16.h),
               child: Obx(() {
                 return Column(
@@ -119,6 +121,7 @@ class _SetupPageState extends State<SetupPage> with SingleTickerProviderStateMix
               }),
             ),
           ),
+        ),
       ),
       );
     

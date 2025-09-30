@@ -16,12 +16,24 @@ class TimerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<TimerController>();
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: () async {
+        controller.stop();
+        return true;
+      },
+      child: Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         surfaceTintColor: Colors.transparent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            controller.stop();
+            Get.back();
+          },
+        ),
         title: Obx(() {
           final p = controller.phase.value;
           final String title = p == Phase.work
@@ -52,8 +64,6 @@ class TimerPage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 12.h),
-              _RoundRoadmap(controller: controller),
               const Spacer(),
               Center(
                 child: Obx(() {
@@ -108,43 +118,11 @@ class TimerPage extends StatelessWidget {
           ),
         ),
       ),
+      ),
     );
   }
 }
 
-class _RoundRoadmap extends StatelessWidget {
-  const _RoundRoadmap({required this.controller});
-  final TimerController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Obx(() {
-      final int total = controller.rounds.value;
-      final int current = controller.currentRound.value;
-      final phase = controller.phase.value;
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(total, (i) {
-          final int index = i + 1;
-          final bool isDone = index < current || phase == Phase.complete;
-          final bool isCurrent = index == current && phase != Phase.complete;
-          final Color c = Theme.of(context).colorScheme.primary;
-          final double size = isCurrent ? 14.w : 8.w;
-          return Container(
-            margin: EdgeInsets.symmetric(horizontal: 3.w),
-            width: size,
-            height: size,
-            decoration: BoxDecoration(
-              color: isDone || isCurrent ? c : Colors.transparent,
-              border: Border.all(color: c.withValues(alpha: 0.6), width: 1.5),
-              borderRadius: BorderRadius.circular(20.r),
-            ),
-          );
-        }),
-      );
-    });
-  }
-}
 
 class _RhythmCue extends StatelessWidget {
   const _RhythmCue({required this.controller});

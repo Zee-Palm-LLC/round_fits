@@ -29,6 +29,10 @@ class ThemeController extends GetxController {
       _themeMode.value = ThemeMode.light;
     } else if (savedMode == 'system') {
       _themeMode.value = ThemeMode.system;
+    } else {
+      // No saved value on first launch: follow system and persist it
+      _themeMode.value = ThemeMode.system;
+      _box.write(_keyThemeMode, ThemeMode.system.name);
     }
 
     final String? savedScheme = _box.read<String>(_keyFlexScheme);

@@ -10,7 +10,7 @@ import '../services/storage_service.dart';
 
 enum Phase { work, rest, complete }
 
-class TimerController extends GetxController with GetTickerProviderStateMixin {
+class TimerController extends GetxController with GetTickerProviderStateMixin, WidgetsBindingObserver {
   TimerController(this._storage);
 
   final StorageService _storage;
@@ -35,6 +35,7 @@ class TimerController extends GetxController with GetTickerProviderStateMixin {
   @override
   void onInit() {
     super.onInit();
+    WidgetsBinding.instance.addObserver(this);
     workSeconds.value = _storage.readInt(StorageKeys.workSeconds, defaultValue: 30);
     restSeconds.value = _storage.readInt(StorageKeys.restSeconds, defaultValue: 15);
     rounds.value = _storage.readInt(StorageKeys.rounds, defaultValue: 8);
@@ -48,10 +49,20 @@ class TimerController extends GetxController with GetTickerProviderStateMixin {
 
   @override
   void onClose() {
+    WidgetsBinding.instance.removeObserver(this);
     _timer?.cancel();
     ringController.dispose();
     numberScaleController.dispose();
     super.onClose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    if (state == AppLifecycleState.paused || state == AppLifecycleState.inactive) {
+      // Pause timer when app goes to background or becomes inactive
+      pause();
+    }
   }
 
   void updateSettings({int? work, int? rest, int? totalRounds}) {
