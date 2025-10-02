@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "641022325669",
+    "project_id": "zee-palm-apps",
+    "storage_bucket": "zee-palm-apps.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641022325669:android:6578a17c84f87c08642e4c",
+        "android_client_info": {
+          "package_name": "com.example.workout_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxuxO7FsDBPZ4bnrRX4fCdqFNb4SsDrtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641022325669:android:4da982c0acb98fcf642e4c",
+        "android_client_info": {
+          "package_name": "com.zeepalm.moodory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxuxO7FsDBPZ4bnrRX4fCdqFNb4SsDrtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641022325669:android:79686d12d27ab7a2642e4c",
+        "android_client_info": {
+          "package_name": "com.zeepalm.scancraft"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxuxO7FsDBPZ4bnrRX4fCdqFNb4SsDrtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
