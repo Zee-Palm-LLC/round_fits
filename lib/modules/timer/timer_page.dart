@@ -135,13 +135,13 @@ class _RhythmCue extends StatelessWidget {
       final int remaining = controller.secondsLeft.value;
       final String msg = isWork
           ? (remaining <= 3
-              ? 'Finish strong!'
+              ? 'finish_strong'.tr
               : remaining <= 10
-                  ? 'Keep the pace'
-                  : 'Push')
+                  ? 'keep_pace'.tr
+                  : 'push'.tr)
           : (remaining <= 3
-              ? 'Get ready'
-              : 'Breathe');
+              ? 'get_ready'.tr
+              : 'breathe'.tr);
       final Alignment target = (remaining % 2 == 0)
           ? Alignment.centerLeft
           : Alignment.centerRight;

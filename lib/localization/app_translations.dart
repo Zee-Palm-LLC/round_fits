@@ -26,7 +26,7 @@ class AppTranslations extends Translations {
     Locale('pl', 'PL'),
     Locale('sv', 'SE'),
     Locale('fi', 'FI'),
-    Locale('no', 'NO'),
+    Locale('nb', 'NO'),
     Locale('da', 'DK'),
     Locale('cs', 'CZ'),
     Locale('el', 'GR'),
@@ -62,7 +62,7 @@ class AppTranslations extends Translations {
     'pl_PL': _pl,
     'sv_SE': _sv,
     'fi_FI': _fi,
-    'no_NO': _no,
+    'nb_NO': _no,
     'da_DK': _da,
     'cs_CZ': _cs,
     'el_GR': _el,
@@ -97,6 +97,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Privacy Policy',
     'terms_of_service': 'Terms of Service',
     'color_scheme': 'Color Scheme',
+    'terms_and_conditions': 'Terms & Conditions',
+    'ok': 'OK',
+    'language_updated': 'Language updated',
+    'finish_strong': 'Finish strong!',
+    'keep_pace': 'Keep the pace',
+    'push': 'Push',
+    'get_ready': 'Get ready',
+    'breathe': 'Breathe',
   };
 
   // Lightweight seed translations to demonstrate structure
@@ -122,6 +130,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Política de privacidad',
     'terms_of_service': 'Términos de servicio',
     'color_scheme': 'Esquema de color',
+    'terms_and_conditions': 'Términos y Condiciones',
+    'ok': 'OK',
+    'language_updated': 'Idioma actualizado',
+    'finish_strong': '¡Termina fuerte!',
+    'keep_pace': 'Mantén el ritmo',
+    'push': 'Empuja',
+    'get_ready': 'Prepárate',
+    'breathe': 'Respira',
   };
   static const _fr = {
     'app_title': 'FitRounds',
@@ -145,6 +161,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Politique de confidentialité',
     'terms_of_service': 'Conditions d\'utilisation',
     'color_scheme': 'Schéma de couleurs',
+    'terms_and_conditions': 'Termes et Conditions',
+    'ok': 'OK',
+    'language_updated': 'Langue mise à jour',
+    'finish_strong': 'Termine fort !',
+    'keep_pace': 'Garde le rythme',
+    'push': 'Pousse',
+    'get_ready': 'Prépare-toi',
+    'breathe': 'Respire',
   };
   static const _de = {
     'app_title': 'FitRounds',
@@ -168,6 +192,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Datenschutzrichtlinie',
     'terms_of_service': 'Nutzungsbedingungen',
     'color_scheme': 'Farbschema',
+    'terms_and_conditions': 'Allgemeine Geschäftsbedingungen',
+    'ok': 'OK',
+    'language_updated': 'Sprache aktualisiert',
+    'finish_strong': 'Stark beenden!',
+    'keep_pace': 'Tempo halten',
+    'push': 'Drücken',
+    'get_ready': 'Bereit machen',
+    'breathe': 'Atmen',
   };
   static const _it = {
     'app_title': 'FitRounds',
@@ -191,6 +223,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Informativa sulla privacy',
     'terms_of_service': 'Termini di servizio',
     'color_scheme': 'Schema colori',
+    'terms_and_conditions': 'Termini e Condizioni',
+    'ok': 'OK',
+    'language_updated': 'Lingua aggiornata',
+    'finish_strong': 'Finisci forte!',
+    'keep_pace': 'Mantieni il ritmo',
+    'push': 'Spingi',
+    'get_ready': 'Preparati',
+    'breathe': 'Respira',
   };
   static const _pt = {
     'app_title': 'FitRounds',
@@ -214,6 +254,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Política de privacidade',
     'terms_of_service': 'Termos de serviço',
     'color_scheme': 'Esquema de cores',
+    'terms_and_conditions': 'Termos e Condições',
+    'ok': 'OK',
+    'language_updated': 'Idioma atualizado',
+    'finish_strong': 'Termine forte!',
+    'keep_pace': 'Mantenha o ritmo',
+    'push': 'Empurre',
+    'get_ready': 'Prepare-se',
+    'breathe': 'Respire',
   };
   static const _ru = {
     'app_title': 'FitRounds',
@@ -237,6 +285,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'Политика конфиденциальности',
     'terms_of_service': 'Условия использования',
     'color_scheme': 'Цветовая схема',
+    'terms_and_conditions': 'Условия и положения',
+    'ok': 'ОК',
+    'language_updated': 'Язык обновлен',
+    'finish_strong': 'Заверши сильно!',
+    'keep_pace': 'Держи темп',
+    'push': 'Толкай',
+    'get_ready': 'Готовься',
+    'breathe': 'Дыши',
   };
   static const _ja = {
     'app_title': 'FitRounds',
@@ -260,6 +316,14 @@ class AppTranslations extends Translations {
     'privacy_policy': 'プライバシーポリシー',
     'terms_of_service': '利用規約',
     'color_scheme': 'カラースキーム',
+    'terms_and_conditions': '利用規約',
+    'ok': 'OK',
+    'language_updated': '言語が更新されました',
+    'finish_strong': '強く終わろう！',
+    'keep_pace': 'ペースを保つ',
+    'push': '押す',
+    'get_ready': '準備する',
+    'breathe': '呼吸する',
   };
   static const _ko = {
     'app_title': 'FitRounds',
@@ -283,6 +347,14 @@ class AppTranslations extends Translations {
     'privacy_policy': '개인정보 처리방침',
     'terms_of_service': '서비스 약관',
     'color_scheme': '색 구성표',
+    'terms_and_conditions': '이용약관',
+    'ok': '확인',
+    'language_updated': '언어가 업데이트되었습니다',
+    'finish_strong': '강하게 마무리하세요!',
+    'keep_pace': '페이스를 유지하세요',
+    'push': '밀어보세요',
+    'get_ready': '준비하세요',
+    'breathe': '숨을 쉬세요',
   };
   static const _zhCN = {
     'app_title': 'FitRounds',
@@ -306,6 +378,14 @@ class AppTranslations extends Translations {
     'privacy_policy': '隐私政策',
     'terms_of_service': '服务条款',
     'color_scheme': '配色方案',
+    'terms_and_conditions': '条款和条件',
+    'ok': '确定',
+    'language_updated': '语言已更新',
+    'finish_strong': '坚持到底！',
+    'keep_pace': '保持节奏',
+    'push': '推',
+    'get_ready': '准备',
+    'breathe': '呼吸',
   };
   static const _zhTW = {
     'app_title': 'FitRounds',
@@ -329,6 +409,14 @@ class AppTranslations extends Translations {
     'privacy_policy': '隱私權政策',
     'terms_of_service': '服務條款',
     'color_scheme': '配色方案',
+    'terms_and_conditions': '條款和條件',
+    'ok': '確定',
+    'language_updated': '語言已更新',
+    'finish_strong': '堅持到底！',
+    'keep_pace': '保持節奏',
+    'push': '推',
+    'get_ready': '準備',
+    'breathe': '呼吸',
   };
 
   // Additional 20 locales (machine translations as placeholders)
@@ -353,6 +441,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'الوضع الداكن',
     'privacy_policy': 'سياسة الخصوصية',
     'terms_of_service': 'شروط الخدمة',
+    'terms_and_conditions': 'الشروط والأحكام',
+    'ok': 'موافق',
+    'language_updated': 'تم تحديث اللغة',
+    'finish_strong': 'انهِ بقوة!',
+    'keep_pace': 'حافظ على الوتيرة',
+    'push': 'ادفع',
+    'get_ready': 'استعد',
+    'breathe': 'تنفس',
   };
   static const _hi = {
     'app_title': 'FitRounds',
@@ -375,6 +471,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'डार्क मोड',
     'privacy_policy': 'गोपनीयता नीति',
     'terms_of_service': 'सेवा की शर्तें',
+    'terms_and_conditions': 'नियम और शर्तें',
+    'ok': 'ठीक है',
+    'language_updated': 'भाषा अपडेट की गई',
+    'finish_strong': 'मजबूती से समाप्त करें!',
+    'keep_pace': 'गति बनाए रखें',
+    'push': 'धक्का दें',
+    'get_ready': 'तैयार हो जाएं',
+    'breathe': 'सांस लें',
   };
   static const _bn = {
     'app_title': 'FitRounds',
@@ -397,6 +501,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'ডার্ক মোড',
     'privacy_policy': 'গোপনীয়তা নীতি',
     'terms_of_service': 'পরিষেবার শর্তাবলী',
+    'terms_and_conditions': 'শর্তাবলী',
+    'ok': 'ঠিক আছে',
+    'language_updated': 'ভাষা আপডেট হয়েছে',
+    'finish_strong': 'শক্তিশালীভাবে শেষ করুন!',
+    'keep_pace': 'গতি বজায় রাখুন',
+    'push': 'ধাক্কা দিন',
+    'get_ready': 'প্রস্তুত হন',
+    'breathe': 'শ্বাস নিন',
   };
   static const _pa = {
     'app_title': 'FitRounds',
@@ -419,6 +531,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'ਡਾਰਕ ਮੋਡ',
     'privacy_policy': 'ਗੋਪਨੀਯਤਾ ਨੀਤੀ',
     'terms_of_service': 'ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ',
+    'terms_and_conditions': 'ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ',
+    'ok': 'ਠੀਕ ਹੈ',
+    'language_updated': 'ਭਾਸ਼ਾ ਅਪਡੇਟ ਹੋਈ',
+    'finish_strong': 'ਮਜ਼ਬੂਤੀ ਨਾਲ ਖਤਮ ਕਰੋ!',
+    'keep_pace': 'ਗਤੀ ਬਣਾਈ ਰੱਖੋ',
+    'push': 'ਧੱਕੋ',
+    'get_ready': 'ਤਿਆਰ ਹੋ ਜਾਓ',
+    'breathe': 'ਸਾਹ ਲਓ',
   };
   static const _ur = {
     'app_title': 'FitRounds',
@@ -441,6 +561,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'ڈارک موڈ',
     'privacy_policy': 'رازداری پالیسی',
     'terms_of_service': 'سروس کی شرائط',
+    'terms_and_conditions': 'شرائط و ضوابط',
+    'ok': 'ٹھیک ہے',
+    'language_updated': 'زبان اپڈیٹ ہو گئی',
+    'finish_strong': 'مضبوطی سے ختم کریں!',
+    'keep_pace': 'رفتار برقرار رکھیں',
+    'push': 'دھکا دیں',
+    'get_ready': 'تیار ہو جائیں',
+    'breathe': 'سانس لیں',
   };
   static const _tr = {
     'app_title': 'FitRounds',
@@ -463,6 +591,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Karanlık Mod',
     'privacy_policy': 'Gizlilik Politikası',
     'terms_of_service': 'Hizmet Şartları',
+    'terms_and_conditions': 'Şartlar ve Koşullar',
+    'ok': 'Tamam',
+    'language_updated': 'Dil güncellendi',
+    'finish_strong': 'Güçlü bitir!',
+    'keep_pace': 'Temponu koru',
+    'push': 'İt',
+    'get_ready': 'Hazırlan',
+    'breathe': 'Nefes al',
   };
   static const _nl = {
     'app_title': 'FitRounds',
@@ -485,6 +621,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Donkere modus',
     'privacy_policy': 'Privacybeleid',
     'terms_of_service': 'Servicevoorwaarden',
+    'terms_and_conditions': 'Algemene Voorwaarden',
+    'ok': 'OK',
+    'language_updated': 'Taal bijgewerkt',
+    'finish_strong': 'Eindig sterk!',
+    'keep_pace': 'Houd het tempo',
+    'push': 'Duw',
+    'get_ready': 'Maak je klaar',
+    'breathe': 'Adem',
   };
   static const _pl = {
     'app_title': 'FitRounds',
@@ -507,6 +651,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Tryb ciemny',
     'privacy_policy': 'Polityka prywatności',
     'terms_of_service': 'Warunki świadczenia usług',
+    'terms_and_conditions': 'Warunki i Zasady',
+    'ok': 'OK',
+    'language_updated': 'Język zaktualizowany',
+    'finish_strong': 'Zakończ mocno!',
+    'keep_pace': 'Utrzymaj tempo',
+    'push': 'Pchaj',
+    'get_ready': 'Przygotuj się',
+    'breathe': 'Oddychaj',
   };
   static const _sv = {
     'app_title': 'FitRounds',
@@ -529,6 +681,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Mörkt läge',
     'privacy_policy': 'Integritetspolicy',
     'terms_of_service': 'Användarvillkor',
+    'terms_and_conditions': 'Villkor och Bestämmelser',
+    'ok': 'OK',
+    'language_updated': 'Språk uppdaterat',
+    'finish_strong': 'Avsluta starkt!',
+    'keep_pace': 'Håll takten',
+    'push': 'Tryck',
+    'get_ready': 'Gör dig redo',
+    'breathe': 'Andas',
   };
   static const _fi = {
     'app_title': 'FitRounds',
@@ -551,6 +711,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Tumma tila',
     'privacy_policy': 'Tietosuojakäytäntö',
     'terms_of_service': 'Käyttöehdot',
+    'terms_and_conditions': 'Ehdot ja Määräykset',
+    'ok': 'OK',
+    'language_updated': 'Kieli päivitetty',
+    'finish_strong': 'Lopeta vahvasti!',
+    'keep_pace': 'Pidä tahti',
+    'push': 'Työnnä',
+    'get_ready': 'Valmistaudu',
+    'breathe': 'Hengitä',
   };
   static const _no = {
     'app_title': 'FitRounds',
@@ -573,6 +741,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Mørk modus',
     'privacy_policy': 'Personvernerklæring',
     'terms_of_service': 'Vilkår for bruk',
+    'terms_and_conditions': 'Vilkår og Betingelser',
+    'ok': 'OK',
+    'language_updated': 'Språk oppdatert',
+    'finish_strong': 'Avslutt sterkt!',
+    'keep_pace': 'Hold tempoet',
+    'push': 'Trykk',
+    'get_ready': 'Gjør deg klar',
+    'breathe': 'Pust',
   };
   static const _da = {
     'app_title': 'FitRounds',
@@ -595,6 +771,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Mørk tilstand',
     'privacy_policy': 'Privatlivspolitik',
     'terms_of_service': 'Servicevilkår',
+    'terms_and_conditions': 'Vilkår og Betingelser',
+    'ok': 'OK',
+    'language_updated': 'Sprog opdateret',
+    'finish_strong': 'Afslut stærkt!',
+    'keep_pace': 'Hold tempoet',
+    'push': 'Tryk',
+    'get_ready': 'Gør dig klar',
+    'breathe': 'Træk vejret',
   };
   static const _cs = {
     'app_title': 'FitRounds',
@@ -617,6 +801,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Tmavý režim',
     'privacy_policy': 'Zásady ochrany osobních údajů',
     'terms_of_service': 'Podmínky služby',
+    'terms_and_conditions': 'Podmínky a Ustanovení',
+    'ok': 'OK',
+    'language_updated': 'Jazyk aktualizován',
+    'finish_strong': 'Dokonči silně!',
+    'keep_pace': 'Udržuj tempo',
+    'push': 'Tlač',
+    'get_ready': 'Připrav se',
+    'breathe': 'Dýchej',
   };
   static const _el = {
     'app_title': 'FitRounds',
@@ -639,6 +831,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Σκούρο θέμα',
     'privacy_policy': 'Πολιτική απορρήτου',
     'terms_of_service': 'Όροι υπηρεσίας',
+    'terms_and_conditions': 'Όροι και Προϋποθέσεις',
+    'ok': 'Εντάξει',
+    'language_updated': 'Γλώσσα ενημερώθηκε',
+    'finish_strong': 'Τέλειωσε δυνατά!',
+    'keep_pace': 'Κράτα το ρυθμό',
+    'push': 'Σπρώξε',
+    'get_ready': 'Ετοιμάσου',
+    'breathe': 'Ανάπνευσε',
   };
   static const _he = {
     'app_title': 'FitRounds',
@@ -661,6 +861,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'מצב כהה',
     'privacy_policy': 'מדיניות פרטיות',
     'terms_of_service': 'תנאי שירות',
+    'terms_and_conditions': 'תנאים והגבלות',
+    'ok': 'אישור',
+    'language_updated': 'שפה עודכנה',
+    'finish_strong': 'סיים חזק!',
+    'keep_pace': 'שמור על הקצב',
+    'push': 'דחף',
+    'get_ready': 'התכונן',
+    'breathe': 'נשום',
   };
   static const _th = {
     'app_title': 'FitRounds',
@@ -683,6 +891,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'โหมดมืด',
     'privacy_policy': 'นโยบายความเป็นส่วนตัว',
     'terms_of_service': 'ข้อกำหนดในการให้บริการ',
+    'terms_and_conditions': 'ข้อกำหนดและเงื่อนไข',
+    'ok': 'ตกลง',
+    'language_updated': 'อัปเดตภาษาแล้ว',
+    'finish_strong': 'จบให้แข็งแกร่ง!',
+    'keep_pace': 'รักษาจังหวะ',
+    'push': 'ผลัก',
+    'get_ready': 'เตรียมพร้อม',
+    'breathe': 'หายใจ',
   };
   static const _vi = {
     'app_title': 'FitRounds',
@@ -705,6 +921,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Chế độ tối',
     'privacy_policy': 'Chính sách quyền riêng tư',
     'terms_of_service': 'Điều khoản dịch vụ',
+    'terms_and_conditions': 'Điều khoản và Điều kiện',
+    'ok': 'OK',
+    'language_updated': 'Ngôn ngữ đã cập nhật',
+    'finish_strong': 'Kết thúc mạnh mẽ!',
+    'keep_pace': 'Giữ nhịp độ',
+    'push': 'Đẩy',
+    'get_ready': 'Chuẩn bị',
+    'breathe': 'Thở',
   };
   static const _id = {
     'app_title': 'FitRounds',
@@ -727,6 +951,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Mode Gelap',
     'privacy_policy': 'Kebijakan Privasi',
     'terms_of_service': 'Ketentuan Layanan',
+    'terms_and_conditions': 'Syarat dan Ketentuan',
+    'ok': 'OK',
+    'language_updated': 'Bahasa diperbarui',
+    'finish_strong': 'Selesaikan dengan kuat!',
+    'keep_pace': 'Jaga kecepatan',
+    'push': 'Dorong',
+    'get_ready': 'Bersiap',
+    'breathe': 'Bernapas',
   };
   static const _uk = {
     'app_title': 'FitRounds',
@@ -749,6 +981,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Темний режим',
     'privacy_policy': 'Політика конфіденційності',
     'terms_of_service': 'Умови надання послуг',
+    'terms_and_conditions': 'Умови та Положення',
+    'ok': 'ОК',
+    'language_updated': 'Мову оновлено',
+    'finish_strong': 'Заверши сильно!',
+    'keep_pace': 'Тримай темп',
+    'push': 'Тискай',
+    'get_ready': 'Готуйся',
+    'breathe': 'Дихай',
   };
   static const _ro = {
     'app_title': 'FitRounds',
@@ -771,6 +1011,14 @@ class AppTranslations extends Translations {
     'dark_mode': 'Mod întunecat',
     'privacy_policy': 'Politica de confidențialitate',
     'terms_of_service': 'Termenii serviciului',
+    'terms_and_conditions': 'Termeni și Condiții',
+    'ok': 'OK',
+    'language_updated': 'Limba actualizată',
+    'finish_strong': 'Termină puternic!',
+    'keep_pace': 'Ține ritmul',
+    'push': 'Împinge',
+    'get_ready': 'Pregătește-te',
+    'breathe': 'Respiră',
   };
   static const _hu = {
     'app_title': 'FitRounds',
@@ -793,5 +1041,13 @@ class AppTranslations extends Translations {
     'dark_mode': 'Sötét mód',
     'privacy_policy': 'Adatvédelmi irányelvek',
     'terms_of_service': 'Szolgáltatási feltételek',
+    'terms_and_conditions': 'Feltételek és Rendeletek',
+    'ok': 'OK',
+    'language_updated': 'Nyelv frissítve',
+    'finish_strong': 'Erősen fejezd be!',
+    'keep_pace': 'Tartsd a tempót',
+    'push': 'Nyomj',
+    'get_ready': 'Készülj fel',
+    'breathe': 'Lélegezz',
   };
 }

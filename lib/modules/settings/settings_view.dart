@@ -125,7 +125,7 @@ class SettingsPage extends StatelessWidget {
                 child: ListTile(
                 contentPadding: EdgeInsets.zero,
                 leading: const Icon(Iconsax.shield_tick),
-                title: const Text('Privacy Policy'),
+                title: Text('privacy_policy'.tr),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () => _openUrl(_privacyUrl),
                 ),
@@ -136,7 +136,7 @@ class SettingsPage extends StatelessWidget {
                 child: ListTile(
                 contentPadding: EdgeInsets.zero,
                 leading: const Icon(Iconsax.document_text),
-                title: const Text('Terms & Conditions'),
+                title: Text('terms_and_conditions'.tr),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () => _openUrl(_termsUrl),
                 ),

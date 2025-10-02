@@ -59,7 +59,7 @@ class LanguagePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Language'),
+        title: Text('language'.tr),
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
@@ -95,7 +95,7 @@ class LanguagePage extends StatelessWidget {
                 Get.updateLocale(item.locale);
                 await box.write(_storageKey, _encodeLocale(item.locale));
                 Get.back();
-                showPrimarySnackbar(title: 'OK', message: 'Language updated');
+                showPrimarySnackbar(title: 'ok'.tr, message: 'language_updated'.tr);
               },
             ),
           );
