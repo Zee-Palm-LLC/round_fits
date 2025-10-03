@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // Brand neon accents
-  static const Color neonCyan = Color(0xFF00E5FF);
+  static const Color neonCyan = Color(0xFF22666B);
   static const Color neonPink = Color(0xFFFF2DAE);
   static const Color neonPurple = Color(0xFF7C4DFF);
 

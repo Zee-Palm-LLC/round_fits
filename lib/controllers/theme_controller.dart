@@ -10,7 +10,7 @@ class ThemeController extends GetxController {
   final GetStorage _box = GetStorage();
 
   final Rx<ThemeMode> _themeMode = ThemeMode.system.obs;
-  final Rx<FlexScheme> _scheme = FlexScheme.aquaBlue.obs;
+  final Rx<FlexScheme> _scheme = FlexScheme.jungle.obs;
 
   ThemeMode get themeMode => _themeMode.value;
   FlexScheme get scheme => _scheme.value;
